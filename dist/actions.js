@@ -228,6 +228,8 @@ var generateAuthActions = function (config) {
                         userSignOutCredentials = (_a.uid = (_c.sent()),
                             _a);
                         dispatch(exports.signOutRequestSent());
+                        axios_1.default.defaults.headers.common = {};
+                        axios_1.default.defaults.headers.common.accept = 'application/json';
                         _c.label = 4;
                     case 4:
                         _c.trys.push([4, 6, , 7]);
