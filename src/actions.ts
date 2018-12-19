@@ -219,6 +219,8 @@ const generateAuthActions = (config: { [key: string]: any }): ActionsExport => {
       uid: await Storage.getItem('uid') as string,
     }
     dispatch(signOutRequestSent())
+    axios.defaults.headers.common = {};
+    axios.defaults.headers.common.accept = 'application/json';
     try {
       await axios({
         method: 'DELETE',
